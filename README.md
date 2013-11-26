@@ -1,4 +1,4 @@
-openssd
+OpenSSD
 =======
 
 The OpenSSD Project Source Code Repository
