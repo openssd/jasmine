@@ -1,0 +1,12 @@
+--cpu=ARM7TDMI-S
+--diag_style=ide
+--fpu=None
+--entry=0
+--info=common,inline,sizes,totals,unused
+--map
+--symbols
+--callgraph
+--scatter=scatter.scl
+--list=list.txt
+-o firmware.axf
+

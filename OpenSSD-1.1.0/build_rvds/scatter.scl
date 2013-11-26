@@ -1,0 +1,31 @@
+LR_IMAGE 0x00000000	96*1024
+{
+	ER_CODE		0x00000000
+	{
+		init.o (init, +FIRST)
+		*.o (+RO)
+	}
+
+	ER_RW		+0
+	{
+		* (+RW)
+	}
+
+	ER_ZI		+0
+	{
+		* (+ZI)
+	}
+
+	ER_IRQ_STACK	93696		EMPTY	1024
+	{
+	}
+
+	ER_FIQ_STACK	94720		EMPTY	1024
+	{
+	}
+
+	ER_SYS_STACK	95744		EMPTY	2560
+	{
+	}
+}
+

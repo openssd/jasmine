@@ -1,0 +1,43 @@
+1.1.0 (December 16, 2011)
+Feature: Now FASTer(./ftl_faster) and DAC FTL(./ftl_dac) schemes have been added.
+Feature: uart_printf() function has been added. (./target_spw/uart.c)
+Feature: static hash library has been added(./target_spw/shashtbl.c). This might be helpful to fast searching valid pages in the log space on hybrid mapping FTLs.
+Feature: Synthetic test cases have been added for verifying FTL logic (./tc/tc_synth.c)
+Bug fix(minor): GreedyFTL may miss the last half part of p2l list (http://www.openssd-project.org/wiki/Special:AWCforum/st/id75)
+Bug fix(minor): GreedyFTL has an issue to ignore the last bad block for each bank (http://www.openssd-project.org/wiki/Special:AWCforum/st/id73)
+Code: Logical capacity of Jasmine can be adjustable (./include/jasmine.h: line#184, default provisioning ratio = 7% of capacity)
+
+1.0.6 (June 25, 2011)
+Bug fix: Corrected a bug in ftl_read() function. Jasmine send 0xFF...FF to host when the host request to read the sector that has never been written to.
+Bug fix: Corrected remaining bugs in Greedy FTL.
+Feature: uart_print_hex() has been added. You can easily print out a hexa decimal number to UART port converting a decimal number.
+
+1.0.5 (June 1, 2011)
+Bug fix: Corrected some bugs in Greedy FTL.
+Bug fix: Corrected nand_block_erase() function(target_spw/flash_wrapper.c).
+
+1.0.4 (May 12, 2011)
+Code: Single assert statement has been added to _mem_copy() in mem_util.c.
+Feature: Normal Power-Off Recovery for Greedy FTL.
+Feature: Response time measurement library (related to timer & UART) has been added to misc.c.
+
+1.0.3 (May 2, 2011)
+Bug fix: Corrected GPIO_MOD initialization.
+Feature: FCONF_CHKCMD register has been added.
+Feature: A function start_timer() and a variable g_timer_interrupt_count has been added.
+Code: "bytes" has been changed to "num_bytes" in mem_util.c to avoid confusion.
+
+1.0.2 (April 15, 2011)
+Big fix: Corrected ecc_size selection for NAND with 22 spare area bytes.
+
+1.0.1 (April 13, 2011)
+Bug fix: Identify Device information showed a wrong number for maximum LBA.
+Code: SATA register names have been changed.
+Feature: OPTION_REDUCED_CAPACITY option has been added to jasmine.h.
+Feature: FO_SCRAMBLE, FO_L and FO_H have been added to flash.h.
+Feature: Now the Installer can be compiled with the free Visual C++ 2010 Express Edition.
+Feature: start_interval_measurement() function has been added to misc.c, which shows how to measure a time interval.
+Feature: Dummy FTL has been added, which is used for measuring SATA and DRAM speed. NAND flash is not involved.
+
+1.0.0 (April 7, 2011)
+Initial release

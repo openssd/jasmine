@@ -1,0 +1,10 @@
+..\ftl\ftl.c
+..\sata\sata_identify.c
+..\sata\sata_cmd.c
+..\sata\sata_isr.c
+..\sata\sata_main.c
+..\sata\sata_table.c
+..\target_spw\mem_util.c
+..\target_spw\flash.c
+..\target_spw\flash_wrapper.c
+..\target_spw\initialize.c
